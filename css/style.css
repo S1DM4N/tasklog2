@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+body, input, option, select, h1, a, button, textarea{
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', cursive;
+    color: #000;
+    text-decoration: none;
+}
+.ar {
+    width: 27vw;
+    height: 53.8vh;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.auth {
+    height: 35.8vh;
+}
+.ar button, .ar a {
+    transition: 0.1s;
+}
+.ar input, .ar select, .ar textarea {
+    padding: 0.8vh 0.5vw;
+    margin: 1.2vh 0 2vh 0;
+}
+.ar button:hover{
+    color: #fff;
+    background-color: #000;
+}
+.ar form {
+    margin: 4vh 0 2vh 0;
+}
+.ar input, .ar select, .ar button, .ar textarea {
+    border: solid 0.2vh #000;
+}
+.ar select {
+    background: none;
+}
+.ar button {
+    width: 13.01vw;
+    padding: 1vh 1vw;
+    margin: 1.4vh auto 1.4vh auto;
+    background: #fff;
+}
+.ar a:hover::before {
+    content: ">> ";
+}
+.ar a:hover::after {
+    content: " <<";
+}
+.ar h1, .ar a{
+    text-align: center;
+    display: block;
+    
+}
+.h_ar p {
+    text-align: center;
+    color: #000;
+}
+form {
+    display: grid;
+}
+.ar .msg {
+    display: inline;
+    text-align: center;
+    padding: 1vh 1vw;
+    background: #ff4800;
+    color: #fff;
+    display: inline-block;
+    margin: 0 auto 2vh auto;
+}
+.ar .mes {
+    text-align: center;
+}
+.task {
+    position: relative;
+    width: auto;
+    height: auto;
+}
+.task .menu {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 4vh;
+}
+.task .exit {
+    width: 9.17vw;
+}
+.task .add {
+    vertical-align: middle;
+    width: 11.67vw;
+}
+.task .add:hover::before {
+    content: "++ ";
+}
+.task .add:hover::after {
+    content: " ++";
+}
+.task .exit:hover::before {
+    content: "** ";
+}
+.task .exit:hover::after {
+    content: " **";
+}
+.task {
+    margin: 6vh 0 6vh 0;
+    text-align: center;
+}
+.task .header_tsk {
+    display: flex;
+    justify-content: space-between;
+}
+.task .customer, .task .executor, .task .text {
+    display: inline-block;
+    text-align: left;
+}
+.task .text {
+    width: 59vw;
+    margin: 0 auto;
+}
+.task .tsk{
+    border: solid 0.2vh #000;
+    display: inline-block;
+    padding: 2vh 2vw 3vh 2vw;
+}
+.task .he, .task .hc {
+    text-decoration: underline;
+    font-weight: bold;
+}
+.task .nc::before, .task .ne::before {
+    content: "Логин:";
+}
+.task .ec::before, .task .ee::before {
+    content: "Эл.почта:";
+}
+.task .nc , .task .ec, .task .ne, .task .ee {
+    border: solid 0.2vh #000;
+    padding: 0.3vh 0.5vw;
+}
+.task .text {
+    margin-top: 2vh;
+}
+.task .edt {
+    display: inline-flex;
+    justify-content: right;
+}
+.task .edt a {
+    border: solid 0.2vh #000;
+    border-top: none;
+    padding: 1vh 1vw;
+}
+.task .edt .delete {
+    width: 10.9vw;
+    border-right: none;
+}
+.task .edt .edit {
+    width: 15.9vw;
+}
+.task .delete:hover::before {
+    content: "×× ";
+}
+.task .delete:hover::after {
+    content: " ××";
+}
+.task .edit:hover::before {
+    content: "@@ ";
+}
+.task .edit:hover::after {
+    content: " @@";
+}
+.task .ts {
+    display: inline-grid;
+}
+#ModalDelete:target, #ModalEdit:target {
+    display: block;
+}
+#ModalDelete, #ModalEdit{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 99999;
+    display: none;
+}
+.window .wind {
+    width: 20vw;
+    height: 8vh;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 2vh 2vw;
+    border-radius: 5px;
+    background: #f2f2f2;
+    box-shadow: 0px 0px 20px 2px;
+}
+.window .slct {
+    display: flex;
+    justify-content: space-around;
+}
+.window .slct a {
+    width: 7.5vw;
+}
+.edit_w form {
+    margin: 0;
+}
+.window .edit_w {
+    height: 26vh;
+}
+.edit_w textarea{
+    width: 20vw;
+    height: 12vh;
+}
+.t_add {
+    height: 124vh;
+    margin: 2vh auto 2vh auto;
+}
+.t_add form {
+    margin-top: 2vh;
+}
+.t_add a {
+    margin-bottom: 2vh;
+}
+.nm_tsk {
+    margin: 3vh 0 1vh 0;
+}
+.st a{
+    width: 8vw;
+}
+.st {
+    display: flex;
+    justify-content: space-around;
+}
+.sty p {
+    text-align: center;
+    margin: 4vh 0 3vh 0;
+}
+.sty {
+    height: 17vh;
+}
+.task .dt {
+    justify-content: space-between;
+    margin-top: 6vh;
+}
+.dt p {
+    border: solid 0.2vh #000;
+    padding: 1vh 1vw;
+    margin: 0;
+    border-bottom: none;
+}
+.dt .strt::before {
+    content:"Начало: "
+}
+.dt .nd::before {
+    content:"Завершение: ";
+}
