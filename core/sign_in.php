@@ -5,7 +5,7 @@ require_once 'db.php';
 $login = $_POST['login'];
 $password = md5($_POST['password']);
 
-$check_user = mysqli_query($connect, "SELECT * FROM `db_user` WHERE `user_login` = '$login' AND `user_password` = '$password'");
+$check_user = mysqli_query($connect, "SELECT * FROM `auth` WHERE `login_auth` = '$login' AND `password_auth` = '$password'");
 
 if (preg_match("/^[a-zA-Z\d_-]*+$/", $_POST['login'])) {
     if (preg_match("/^[A-Z]{1}[a-zA-Z\d]*[`~!@#$%^&*()_+-={}|:;<>?,.\/\"\'\\\[\]]{1}+$/", $_POST['password'])) {
@@ -14,10 +14,10 @@ if (preg_match("/^[a-zA-Z\d_-]*+$/", $_POST['login'])) {
             $user = mysqli_fetch_assoc($check_user);
         
             $_SESSION['user'] = [
-                "user_id" => $user['user_id'],
-                "user_login" => $user['user_login'],
-                "user_email" => $user['user_email'],
-                "id_rule" => $user['id_rule']
+                "id_auth " => $user['id_auth'],
+                "login_auth" => $user['login_auth'],
+                "email_auth" => $user['email_auth'],
+                "id_type " => $user['id_type ']
             ];
 
             header('Location: ../index.php');

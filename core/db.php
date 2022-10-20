@@ -1,6 +1,6 @@
 <!-- Подключение к БД -->
 <?php
-    $connect = mysqli_connect('localhost' ,'root', '', 'db');
+    $connect = mysqli_connect('localhost' ,'root', '', 'tasklog');
 if (!$connect) {
     die("Ошибка: " . mysqli_connect_error());
 } 

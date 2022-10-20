@@ -17,6 +17,14 @@ if (isset($_SESSION['user'])) {
     <main class="ar">
         <h1>Регистрация</h1>
         <form action="core/log_in.php" method="post">
+            <h3>Личная информация:</h3>
+            <label>Фамилия</label>
+            <input type="text" name="surname" placeholder="Введите фамилию">
+            <label>Имя</label>
+            <input type="text" name="name" placeholder="Введите имя">
+            <label>Отчество</label>
+            <input type="text" name="patronymic" placeholder="Введите отчество">
+            <h3>Персональные данные:</h3>
             <label>Логин</label>
             <input type="text" name="login" placeholder="Введите логин">
             <label>Почта</label>
