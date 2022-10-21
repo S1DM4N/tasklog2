@@ -1,3 +1,4 @@
+<!-- Подключение сессии с проверкой сессии пользователя -->
 <?php session_start(); 
 if (!$_SESSION['user']) {
     header('Location: reg.php');

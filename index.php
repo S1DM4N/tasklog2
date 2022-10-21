@@ -1,3 +1,4 @@
+<!-- Подключение БД и сессии с проверкой сессии пользователя -->
 <?php session_start(); 
 require_once 'core/db.php';
 if (!$_SESSION['user']) {

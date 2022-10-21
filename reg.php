@@ -1,3 +1,4 @@
+<!-- Подключение сессии с проверкой сессии пользователя -->
 <?php session_start(); 
 if (isset($_SESSION['user'])) {
     header('Location: index.php');
@@ -16,6 +17,7 @@ if (isset($_SESSION['user'])) {
     <header class="h_ar"><p>Добро пожаловать! Зарегистрируйтесь или войдите в аккаунт.</p></header>
     <main class="ar">
         <h1>Регистрация</h1>
+        <!-- Форма регистрации -->
         <form action="core/log_in.php" method="post">
             <h3>Личная информация:</h3>
             <label>Фамилия</label>
@@ -41,6 +43,7 @@ if (isset($_SESSION['user'])) {
             <input type="password" name="conf_password" placeholder="Подтвердите пароль">
             <button>Войти</button>
         </form>
+        <!-- Вывод сообщения об ошибке -->
         <?php 
             if (isset ($_SESSION['message'])) {
                 echo '<div class= mes><p class=msg>' . $_SESSION['message'] . ' </p></div>';

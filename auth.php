@@ -1,3 +1,4 @@
+<!-- Подключение сессии с проверкой сессии пользователя -->
 <?php session_start(); 
 if (isset($_SESSION['user'])) {
     header('Location: index.php');
@@ -16,6 +17,7 @@ if (isset($_SESSION['user'])) {
     <header class="h_ar"><p>Добро пожаловать! Зарегистрируйтесь или войдите в аккаунт.</p></header>
     <main class="ar auth">
         <h1>Авторизация</h1>
+        <!-- Форма авторизации -->
         <form action="core/sign_in.php" method="post">
         <label>Логин</label>
             <input type="text" name="login" placeholder="Введите логин">
@@ -23,6 +25,7 @@ if (isset($_SESSION['user'])) {
             <input type="password" name="password" placeholder="Введите пароль">
             <button>Войти</button>
         </form>
+        <!-- Вывод сообщения об ошибке -->
         <?php 
             if (isset ($_SESSION['message'])) {
                 echo '<div class= mes><p class=msg>' . $_SESSION['message'] . ' </p></div>';

@@ -1,3 +1,4 @@
+<!-- Подключение сессии с проверкой сессии пользователя -->
 <?php session_start(); 
 if (!$_SESSION['user']) {
     header('Location: reg.php');
@@ -17,6 +18,7 @@ if (!$_SESSION['user']) {
 <body>
     <main class="ar t_add">
         <h1>Составление задачи</h1>
+        <!-- Форма составления задачи -->
         <form action="core/add.php" method="post">
             <h3>Исполнитель:</h3>
             <label>Логин</label>
